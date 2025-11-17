@@ -67,6 +67,41 @@ Here is a basic example to initialize communication:
 - Issue: Poor communication range.
 - Solution: Ensure antennas are aligned and not obstructed.
 
+## Privacy Protector Userscript
+
+This repository also includes a browser userscript for privacy protection.
+
+### Privacy Protector Features
+
+The Privacy Protector userscript (`scripts/privacy-protector.user.js`) provides:
+
+- **Sensitive Data Protection**: Automatically detects and hides sensitive information including:
+  - Social Security Numbers (SSN)
+  - Credit card numbers
+  - Email addresses
+  - Dates
+  - Specific usernames
+
+- **Registration Form Blocking**: Prevents registration and signup forms from being submitted
+- **Autocomplete Prevention**: Disables autocomplete on input fields
+- **Dynamic Content Monitoring**: Uses MutationObserver to protect against dynamically loaded content
+
+### Installing the Userscript
+
+1. Install a userscript manager browser extension:
+   - [Tampermonkey](https://www.tampermonkey.net/) (Chrome, Firefox, Safari, Edge)
+   - [Greasemonkey](https://www.greasespot.net/) (Firefox)
+   - [Violentmonkey](https://violentmonkey.github.io/) (Chrome, Firefox, Edge)
+
+2. Open the `scripts/privacy-protector.user.js` file
+3. Copy the entire script content
+4. Create a new userscript in your userscript manager
+5. Paste the content and save
+
+The script will automatically activate on:
+- Wikipedia sites
+- Pages containing `/signup`, `/register`, or `/join` in the URL
+
 ### Contributions
 - Feel free to fork this repository and create pull requests for improvements or additional examples.
 
